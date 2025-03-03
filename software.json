@@ -1,18 +1,195 @@
 {
-    "vscodium":{
-        "icon":"https://vscodium.com/img/codium_cnl.svg",
-        "name":"VSCodium"
+    "firefox": {
+        "icon": "/icons/firefox.png",
+        "name": "Firefox",
+        "methods": {
+            "apt": "firefox",
+            "dnf": "firefox",
+            "pacman": "firefox",
+            "zypper": "MozillaFirefox",
+            "snap": "firefox",
+            "flatpak": "org.mozilla.firefox"
+        }
     },
-    "ghostty":{},
-    "zen":{},
-    "firefox":{},
-    "fish":{},
-    "deno":{},
-    "nim":{},
-    "hello":{
-        "name":"Hello",
-        "methods":{
-            "apt": "hello"
+    "vlc": {
+        "icon": "/icons/vlc.png",
+        "name": "VLC",
+        "methods": {
+            "apt": "vlc",
+            "dnf": "vlc",
+            "pacman": "vlc",
+            "flatpak": "org.videolan.VLC",
+            "snap": "vlc"
+        }
+    },
+    "gcc": {
+        "icon": "/icons/gcc.png",
+        "name": "GCC",
+        "methods": {
+            "apt": "gcc",
+            "dnf": "gcc",
+            "pacman": "gcc",
+            "brew": "gcc"
+        }
+    },
+    "docker": {
+        "icon": "/icons/docker.png",
+        "name": "Docker",
+        "methods": {
+            "apt": "docker.io",
+            "dnf": "docker",
+            "pacman": "docker",
+            "snap": "docker"
+        }
+    },
+    "htop": {
+        "icon": "/icons/htop.png",
+        "name": "htop",
+        "methods": {
+            "apt": "htop",
+            "dnf": "htop",
+            "pacman": "htop",
+            "brew": "htop"
+        }
+    },
+    "vscode": {
+        "icon": "/icons/vscode.png",
+        "name": "VSCode",
+        "methods": {
+            "snap": "code",
+            "flatpak": "com.visualstudio.code",
+            "brew": "visual-studio-code"
+        }
+    },
+    "nodejs": {
+        "icon": "/icons/nodejs.png",
+        "name": "Node.js",
+        "methods": {
+            "apt": "nodejs",
+            "dnf": "nodejs",
+            "pacman": "nodejs",
+            "snap": "node"
+        }
+    },
+    "python": {
+        "icon": "/icons/python.png",
+        "name": "Python",
+        "methods": {
+            "apt": "python3",
+            "dnf": "python3",
+            "pacman": "python",
+            "brew": "python"
+        }
+    },
+    "git": {
+        "icon": "/icons/git.png",
+        "name": "Git",
+        "methods": {
+            "apt": "git",
+            "dnf": "git",
+            "pacman": "git",
+            "brew": "git"
+        }
+    },
+    "neofetch": {
+        "icon": "/icons/neofetch.png",
+        "name": "Neofetch",
+        "methods": {
+            "apt": "neofetch",
+            "dnf": "neofetch",
+            "pacman": "neofetch",
+            "brew": "neofetch"
+        }
+    },
+    "obs": {
+        "icon": "/icons/obs.png",
+        "name": "OBS",
+        "methods": {
+            "apt": "obs-studio",
+            "dnf": "obs-studio",
+            "pacman": "obs-studio",
+            "flatpak": "com.obsproject.Studio"
+        }
+    },
+    "discord": {
+        "icon": "/icons/discord.png",
+        "name": "Discord",
+        "methods": {
+            "snap": "discord",
+            "flatpak": "com.discordapp.Discord"
+        }
+    },
+    "virtualbox": {
+        "icon": "/icons/virtualbox.png",
+        "name": "VirtualBox",
+        "methods": {
+            "apt": "virtualbox",
+            "dnf": "VirtualBox",
+            "pacman": "virtualbox"
+        }
+    },
+    "zoom": {
+        "icon": "/icons/zoom.png",
+        "name": "Zoom",
+        "methods": {
+            "snap": "zoom-client",
+            "flatpak": "us.zoom.Zoom"
+        }
+    },
+    "ffmpeg": {
+        "icon": "/icons/ffmpeg.png",
+        "name": "FFmpeg",
+        "methods": {
+            "apt": "ffmpeg",
+            "dnf": "ffmpeg",
+            "pacman": "ffmpeg",
+            "brew": "ffmpeg"
+        }
+    },
+    "postgresql": {
+        "icon": "/icons/postgresql.png",
+        "name": "PostgreSQL",
+        "methods": {
+            "apt": "postgresql",
+            "dnf": "postgresql",
+            "pacman": "postgresql",
+            "brew": "postgresql"
+        }
+    },
+    "redis": {
+        "icon": "/icons/redis.png",
+        "name": "Redis",
+        "methods": {
+            "apt": "redis-server",
+            "dnf": "redis",
+            "pacman": "redis",
+            "brew": "redis"
+        }
+    },
+    "slack": {
+        "icon": "/icons/slack.png",
+        "name": "Slack",
+        "methods": {
+            "snap": "slack",
+            "flatpak": "com.slack.Slack"
+        }
+    },
+    "telegram": {
+        "icon": "/icons/telegram.png",
+        "name": "Telegram",
+        "methods": {
+            "snap": "telegram-desktop",
+            "flatpak": "org.telegram.desktop"
+        }
+    },
+    "jdk": {
+        "icon": "/icons/jdk.png",
+        "name": "JDK",
+        "methods": {
+            "apt": "default-jdk",
+            "dnf": "java-latest-openjdk-devel",
+            "pacman": "jdk-openjdk",
+            "brew": "openjdk"
         }
     }
 }
