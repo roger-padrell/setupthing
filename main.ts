@@ -773,7 +773,7 @@ router.get("/result/:id", (ctx) => {
         <body>
           <h1>Done</h1>
           <p>Copy this into your terminal to install your setup</p>
-          <input readonly="" id="code" value="curl -sSL http://localhost:8080/api/${ctx.params.id} | bash">
+          <input readonly="" id="code" value="curl -sSL https://setupthing.deno.dev/api/${ctx.params.id} | bash">
         </body>
         <script>
           let code = document.getElementById("code");
@@ -936,9 +936,6 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 
 const portN: number = 8080;
-console.log("Starting server on port: %c" + portN, "font-weight: bold; color: green")
-console.log("Check it at %chttp://localhost:" + portN, "font-weight: bold; color: blue; text-decoration: underline")
-console.log("")
 console.log("%cSetupThing", "font-weight: black; color: green")
 console.log("   Use setups the %ceazy %cway", "font-weight: bold", "font-weight: normal")
 console.log("")
