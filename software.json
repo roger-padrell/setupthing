@@ -1,0 +1,18 @@
+{
+    "vscodium":{
+        "icon":"https://vscodium.com/img/codium_cnl.svg",
+        "name":"VSCodium"
+    },
+    "ghostty":{},
+    "zen":{},
+    "firefox":{},
+    "fish":{},
+    "deno":{},
+    "nim":{},
+    "hello":{
+        "name":"Hello",
+        "methods":{
+            "apt": "hello"
+        }
+    }
+}
