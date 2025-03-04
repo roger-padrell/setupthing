@@ -710,37 +710,6 @@ router.get("/result/:id", (ctx) => {
             font-weight: 800;
           }
 
-          a{
-            position: relative;
-            text-decoration: none;
-            color: white;
-            background-color: black;
-            padding: 1rem;
-          }
-
-          a::after{
-            z-index: -3;
-            content:"";
-            position: absolute;
-            display: block;
-            height: 100%;
-            width: 100%;
-            top: .5rem;
-            left: .5rem;
-            background-color: #43ff43;
-            transition: top .1s, left .1s;
-          }
-
-          a:hover::after{
-            top: 1rem;
-            left: 1rem;
-          }
-
-          a:active::after{
-            top: 0rem;
-            left: 0rem;
-          }
-
           h1{
             font-weight: 800;
             font-size: 60px;
