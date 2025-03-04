@@ -772,9 +772,10 @@ router.get("/result/:id", (ctx) => {
           }
         </style>
         <body>
-          <h1>Done</h1>
+          <h1>Setup ready</h1>
           <p>Copy this into your terminal to install your setup</p>
           <input readonly="" id="code" value="curl -sSL https://setupthing.deno.dev/api/${ctx.params.id} | bash">
+          <p>This should not harm your computer in any way, as it's using other package managers and code from other sources. You can check the code before using it <a href="https://setupthing.deno.dev/api/${ctx.params.id}">here</a>. We do not certify the security and / or originality of these packages. You can see the sources <a href="https://github.com/roger-padrell/setupthing/blob/main/software.json">here</a></p>
         </body>
         <script>
           let code = document.getElementById("code");
