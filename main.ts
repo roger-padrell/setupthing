@@ -946,7 +946,20 @@ app.listen({ port: portN });
 // set first
 
 const methodCommand = {
-  "apt":"sudo apt install %s%"
+  "apt":"sudo apt install %s%",
+  "dnf":"sudo dnf install %s%",
+  "yum":"sudo yum install %s%",
+  "pacman":"sudo pacman -S %s%",
+  "zypper":"sudo zypper install %s%",
+  "snap":"sudo snap install %s%",
+  "flatpak":"flatpak install %s%",
+  "emerge":"sudo emerge %s%",
+  "apk":"sudo apk add %s%",
+  "pkg":"sudo pkg install %s%",
+  "brew":"brew install %s%",
+  "nix-env":"nix-env -iA nixpkgs.%s%",
+  "rpm":"sudo rpm -i %s%.rpm",
+  "dpkg":"sudo dpkg -i %s%.deb"
 }
 
 let detectSH = `#!/bin/bash
