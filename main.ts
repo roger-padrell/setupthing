@@ -216,6 +216,7 @@ router.get("/editor", (ctx) => {
       <body>
         <h1>Select the software you want</h1>
         <div id="grid">${items}</div>
+        <div id="disclaimer">You may want to install <a href="https://flathub.org/setup">Flatpack</a>, <a href="https://snapcraft.io/docs/installing-snapd">Snap</a> or other package managers so, when searching, we found more options to install the software with.</div>
         <button onclick="create()">Create my setup</button>
       </body>
       <script>
@@ -709,37 +710,6 @@ router.get("/result/:id", (ctx) => {
             font-weight: 800;
           }
 
-          a{
-            position: relative;
-            text-decoration: none;
-            color: white;
-            background-color: black;
-            padding: 1rem;
-          }
-
-          a::after{
-            z-index: -3;
-            content:"";
-            position: absolute;
-            display: block;
-            height: 100%;
-            width: 100%;
-            top: .5rem;
-            left: .5rem;
-            background-color: #43ff43;
-            transition: top .1s, left .1s;
-          }
-
-          a:hover::after{
-            top: 1rem;
-            left: 1rem;
-          }
-
-          a:active::after{
-            top: 0rem;
-            left: 0rem;
-          }
-
           h1{
             font-weight: 800;
             font-size: 60px;
@@ -771,9 +741,10 @@ router.get("/result/:id", (ctx) => {
           }
         </style>
         <body>
-          <h1>Done</h1>
+          <h1>Setup ready</h1>
           <p>Copy this into your terminal to install your setup</p>
           <input readonly="" id="code" value="curl -sSL https://setupthing.deno.dev/api/${ctx.params.id} | bash">
+          <p>This should not harm your computer in any way, as it's using other package managers and code from other sources. You can check the code before using it <a href="https://setupthing.deno.dev/api/${ctx.params.id}">here</a>. We do not certify the security and / or originality of these packages. You can see the sources <a href="https://github.com/roger-padrell/setupthing/blob/main/software.json">here</a></p>
         </body>
         <script>
           let code = document.getElementById("code");
@@ -963,7 +934,20 @@ app.listen({ port: portN });
 // set first
 
 const methodCommand = {
-  "apt":"sudo apt install %s%"
+  "apt":"sudo apt install %s%",
+  "dnf":"sudo dnf install %s%",
+  "yum":"sudo yum install %s%",
+  "pacman":"sudo pacman -S %s%",
+  "zypper":"sudo zypper install %s%",
+  "snap":"sudo snap install %s%",
+  "flatpak":"flatpak install %s%",
+  "emerge":"sudo emerge %s%",
+  "apk":"sudo apk add %s%",
+  "pkg":"sudo pkg install %s%",
+  "brew":"brew install %s%",
+  "nix-env":"nix-env -iA nixpkgs.%s%",
+  "rpm":"sudo rpm -i %s%.rpm",
+  "dpkg":"sudo dpkg -i %s%.deb"
 }
 
 let detectSH = `#!/bin/bash
