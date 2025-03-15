@@ -819,6 +819,23 @@ router.get("/api/:id", (ctx) => {
   }
 })
 
+// static (used for my other projects)
+let availableStatics = ["ffmpeg"]
+router.get("/static/:name", (ctx) => {
+  console.log(`   %cGET /static/${ctx.params.name} 200`, "color:green")
+  ctx.response.type = "text/x-shellscript";
+  if(availableStatics.includes(ctx.params.name)){
+    ctx.response.status = 200;
+    ctx.response.body = Deno.readFileSync("./static/src/" + ctx.params.name + ".sh");
+  }
+  else{
+    ctx.response.status = 400
+    ctx.response.body = `echo 400: Trying static script at "https://setupthing.deno.dev/static/${ctx.params.id}", it does not exist`
+    return;
+  }
+})
+
+
 // undefined software image
 router.get("/undefined", async (ctx) => {
   console.log("   %cGET /undefined 303", "color:yellow")
