@@ -43,7 +43,7 @@
         }
     },
     "htop": {
-        "icon": "/icons/htop.png",
+        "icon": "https://static-00.iconduck.com/assets.00/htop-icon-1024x1024-ftajkstm.png",
         "name": "htop",
         "methods": {
             "apt": "htop",
@@ -53,7 +53,7 @@
         }
     },
     "vscode": {
-        "icon": "/icons/vscode.png",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png",
         "name": "VSCode",
         "methods": {
             "snap": "code",
@@ -62,7 +62,7 @@
         }
     },
     "nodejs": {
-        "icon": "/icons/nodejs.png",
+        "icon": "https://midu.dev/images/tags/node.png",
         "name": "Node.js",
         "methods": {
             "apt": "nodejs",
@@ -72,7 +72,7 @@
         }
     },
     "python": {
-        "icon": "/icons/python.png",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
         "name": "Python",
         "methods": {
             "apt": "python3",
@@ -82,7 +82,7 @@
         }
     },
     "git": {
-        "icon": "/icons/git.png",
+        "icon": "https://victorroblesweb.es/wp-content/uploads/2018/04/git.png",
         "name": "Git",
         "methods": {
             "apt": "git",
@@ -102,7 +102,7 @@
         }
     },
     "obs": {
-        "icon": "/icons/obs.png",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/1/13/OBS_Studio_logo.png",
         "name": "OBS",
         "methods": {
             "apt": "obs-studio",
@@ -112,7 +112,7 @@
         }
     },
     "discord": {
-        "icon": "/icons/discord.png",
+        "icon": "https://www.svgrepo.com/show/353655/discord-icon.svg",
         "name": "Discord",
         "methods": {
             "snap": "discord",
@@ -120,7 +120,7 @@
         }
     },
     "virtualbox": {
-        "icon": "/icons/virtualbox.png",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png",
         "name": "VirtualBox",
         "methods": {
             "apt": "virtualbox",
