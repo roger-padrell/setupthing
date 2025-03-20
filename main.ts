@@ -184,7 +184,7 @@ router.get("/editor", (ctx) => {
         }
 
         .item img{
-          width: 80%;
+          height: 80%;
         }
 
         .item p{
