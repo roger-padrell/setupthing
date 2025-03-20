@@ -24,3 +24,9 @@ Click the input with the code to copy it and then paste it into your terminal.
 
 ### Wait for the installation to complete
 And your done!
+
+## Inspiration
+This project is inspired by the [Deno installation process](https://docs.deno.com/runtime/getting_started/installation/), and the struggle to mantain stable setups in different linux distros and machines.
+
+## Toolkit
+This project uses [Deno](https://deno.com) and [Deno publish/dash](https://dash.deno.com) to work.
