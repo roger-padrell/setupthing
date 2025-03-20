@@ -1,4 +1,11 @@
 {
+    "nim":{
+        "icon":"https://static-00.iconduck.com/assets.00/file-type-nim-icon-1024x702-vaejicdo.png",
+        "name":"Nim",
+        "methods":{
+            "custom":"curl https://nim-lang.org/choosenim/init.sh -sSf | sh"
+        }
+    },
     "vscodium":{
         "icon":"https://avatars.githubusercontent.com/u/40338071?v=4",
         "name":"VSCodium",
