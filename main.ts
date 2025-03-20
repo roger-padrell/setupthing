@@ -216,7 +216,7 @@ router.get("/editor", (ctx) => {
       <body>
         <h1>Select the software you want</h1>
         <div id="grid">${items}</div>
-        <div id="disclaimer">You may want to install <a href="https://flathub.org/setup">Flatpack</a>, <a href="https://snapcraft.io/docs/installing-snapd">Snap</a> or other package managers so, when searching, we found more options to install the software with.</div>
+        <div id="disclaimer">You may want to install <a href="https://flathub.org/setup">Flatpack</a>, <a href="https://snapcraft.io/docs/installing-snapd">Snap</a> or other package managers so, when searching, we find more options to install the software with.</div>
         <button onclick="create()">Create my setup</button>
       </body>
       <script>
