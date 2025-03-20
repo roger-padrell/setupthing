@@ -92,7 +92,7 @@
         }
     },
     "neofetch": {
-        "icon": "/icons/neofetch.png",
+        "icon": "undefined",
         "name": "Neofetch",
         "methods": {
             "apt": "neofetch",
@@ -129,7 +129,7 @@
         }
     },
     "zoom": {
-        "icon": "/icons/zoom.png",
+        "icon": "https://static-00.iconduck.com/assets.00/zoom-icon-2048x2048-3dsm85vk.png",
         "name": "Zoom",
         "methods": {
             "snap": "zoom-client",
@@ -137,7 +137,7 @@
         }
     },
     "ffmpeg": {
-        "icon": "/icons/ffmpeg.png",
+        "icon": "https://img.icons8.com/?size=512&id=32418&format=png",
         "name": "FFmpeg",
         "methods": {
             "apt": "ffmpeg",
@@ -147,7 +147,7 @@
         }
     },
     "postgresql": {
-        "icon": "/icons/postgresql.png",
+        "icon": "https://static-00.iconduck.com/assets.00/postgresql-icon-1987x2048-v2fkmdaw.png",
         "name": "PostgreSQL",
         "methods": {
             "apt": "postgresql",
@@ -157,7 +157,7 @@
         }
     },
     "redis": {
-        "icon": "/icons/redis.png",
+        "icon": "https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png",
         "name": "Redis",
         "methods": {
             "apt": "redis-server",
@@ -167,7 +167,7 @@
         }
     },
     "slack": {
-        "icon": "/icons/slack.png",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1024px-Slack_icon_2019.svg.png",
         "name": "Slack",
         "methods": {
             "snap": "slack",
@@ -183,7 +183,7 @@
         }
     },
     "jdk": {
-        "icon": "/icons/jdk.png",
+        "icon": "https://static-00.iconduck.com/assets.00/java-icon-378x512-w60vlu77.png",
         "name": "JDK",
         "methods": {
             "apt": "default-jdk",
