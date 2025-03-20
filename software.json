@@ -4,7 +4,7 @@
         "name":"VSCodium",
         "methods":{
             "snap":"codium --classic",
-            "emerge":"vscodium",
+            "emerge":"-av vscodium",
             "flatpack":"com.vscodium.codium"
         }
     },
