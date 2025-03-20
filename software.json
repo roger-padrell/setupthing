@@ -1,4 +1,13 @@
 {
+    "vscodium":{
+        "icon":"https://avatars.githubusercontent.com/u/40338071?v=4",
+        "name":"VSCodium",
+        "methods":{
+            "snap":"codium --classic",
+            "emerge":"vscodium",
+            "flatpack":"com.vscodium.codium",
+        }
+    },
     "firefox": {
         "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1200px-Firefox_logo%2C_2019.svg.png",
         "name": "Firefox",
