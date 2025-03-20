@@ -12,7 +12,7 @@
         }
     },
     "vlc": {
-        "icon": "/icons/vlc.png",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/VLC_Icon.svg/1200px-VLC_Icon.svg.png",
         "name": "VLC",
         "methods": {
             "apt": "vlc",
