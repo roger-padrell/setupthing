@@ -947,7 +947,8 @@ const methodCommand = {
   "brew":"brew install %s%",
   "nix-env":"nix-env -iA nixpkgs.%s%",
   "rpm":"sudo rpm -i %s%.rpm",
-  "dpkg":"sudo dpkg -i %s%.deb"
+  "dpkg":"sudo dpkg -i %s%.deb",
+  "custom":"%s%"
 }
 
 let detectSH = `#!/bin/bash
@@ -970,7 +971,7 @@ package_managers=(
     dpkg       # Debian-based (low-level)
 )
 
-detected=()
+detected=("custom")
 
 # Check each package manager
 for pm in "\${package_managers[@]}"; do
