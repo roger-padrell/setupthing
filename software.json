@@ -5,7 +5,7 @@
         "methods":{
             "snap":"codium --classic",
             "emerge":"-av vscodium",
-            "flatpack":"com.vscodium.codium"
+            "flatpak":"com.vscodium.codium"
         }
     },
     "firefox": {
