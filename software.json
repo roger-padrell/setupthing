@@ -23,7 +23,7 @@
         }
     },
     "gcc": {
-        "icon": "/icons/gcc.png",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/GNU_Compiler_Collection_logo.svg/1200px-GNU_Compiler_Collection_logo.svg.png",
         "name": "GCC",
         "methods": {
             "apt": "gcc",
