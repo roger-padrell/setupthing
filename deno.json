@@ -1,7 +1,7 @@
 {
   "tasks": {
     "dev": "deno run --watch --allow-net --allow-read main.ts",
-    "build": "./setup.sh"
+    "build": "chmod +x setup.sh && sh setup.sh"
   },
   "imports": {
     "@oak/oak": "jsr:@oak/oak@^17.1.4",
