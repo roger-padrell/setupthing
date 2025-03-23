@@ -934,7 +934,7 @@ app.listen({ port: portN });
 // set first
 
 const methodCommand = {
-  "apt":"sudo apt install %s%",
+  "apt":"sudo apt install -y %s%",
   "dnf":"sudo dnf install %s%",
   "yum":"sudo yum install %s%",
   "pacman":"sudo pacman -S %s%",
