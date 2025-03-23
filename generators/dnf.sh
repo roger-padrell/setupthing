@@ -1,0 +1,1 @@
+dnf list available --queryformat "%{name}\n" | sort -u | jq -R | jq -s

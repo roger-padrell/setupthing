@@ -1,5 +1,6 @@
 import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
-import flathub from "./flathub.json" with {type: "json"};
+import flathub from "./data/flathub.json" with {type: "json"};
+import apt from "./data/apt.json" with {type: "json"};
 
 
 interface RegistryResult {
@@ -10,12 +11,10 @@ interface RegistryResult {
 
 async function checkApt(pkg: string): Promise<RegistryResult> {
   try {
-    const res = await fetch(`https://packages.debian.org/search?keywords=${pkg}`);
-    const html = await res.text();
-    const doc = new DOMParser().parseFromString(html, "text/html");
+    const exists = Object.values(apt).includes(pkg)
     return {
       registry:"apt", 
-      exists: (!!doc?.querySelector(`a[href*="/${pkg}"]`)), 
+      exists: exists, 
       packageName: pkg
     };
   } catch {

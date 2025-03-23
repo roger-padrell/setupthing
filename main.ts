@@ -978,7 +978,9 @@ for pm in "\${package_managers[@]}"; do
     if command -v "$pm" &> /dev/null; then
         detected+=("$pm")
     fi
-done`
+done
+
+missing=()`
 
 function solveOrder(solvingOrder: order){
   let result = detectSH;
@@ -1006,8 +1008,18 @@ for pm in "\${available[@]}"; do
         fi
     fi
 done
-# Finished installing ${i}`
+if [ "$installed" -eq 1 ]; then
+  # Finished installing ${i}
+else
+  missing+=("${i}")
+fi`
     }
+    // add check for missing
+result += `
+for s in "\${missing[@]}"; do
+  echo "Could not install $pm, compatible package manager not found"
+done
+`
     return result;
 }
 
