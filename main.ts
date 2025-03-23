@@ -1008,6 +1008,7 @@ for pm in "\${available[@]}"; do
         fi
     fi
 done
+
 if [ "$installed" -eq 1 ]; then
   # Finished installing ${i}
 else
@@ -1016,6 +1017,7 @@ fi`
     }
     // add check for missing
 result += `
+
 for s in "\${missing[@]}"; do
   echo "Could not install $pm, compatible package manager not found"
 done
