@@ -1010,7 +1010,7 @@ for pm in "\${available[@]}"; do
 done
 
 if [ "$installed" -eq 1 ]; then
-  # Finished installing ${i}
+  echo "Succesfully installed ${i}"
 else
   missing+=("${i}")
 fi`
