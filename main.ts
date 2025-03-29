@@ -1019,7 +1019,7 @@ fi`
 result += `
 
 for s in "\${missing[@]}"; do
-  echo "Could not install $pm, compatible package manager not found"
+  echo "Could not install $s, compatible package manager not found"
 done
 `
     return result;
