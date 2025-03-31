@@ -6,7 +6,8 @@ import { Context } from "@oak/oak/context";
 // Green: #43ff43
 // baseURL
 const portN: number = 8080;
-const baseURL = "localhost:" + portN;
+const localhost = false;
+const baseURL = localhost ? "localhost:" + portN : "https://setupthing.deno.dev";
 
 const router = new Router();
 
