@@ -4,6 +4,9 @@ import software from "./software.json" with {type: "json"};
 import { Context } from "@oak/oak/context";
 
 // Green: #43ff43
+// baseURL
+const portN: number = 8080;
+const baseURL = "localhost:" + portN;
 
 const router = new Router();
 
@@ -750,8 +753,8 @@ router.get("/result/:id", (ctx) => {
         <body>
           <h1>Setup ready</h1>
           <p>Copy this into your terminal to install your setup</p>
-          <input readonly="" id="code" value="curl -sSL https://setupthing.deno.dev/api/${ctx.params.id} | bash">
-          <p>This should not harm your computer in any way, as it's using other package managers and code from other sources. You can check the code before using it <a href="https://setupthing.deno.dev/api/${ctx.params.id}">here</a>. We do not certify the security and / or originality of these packages. You can see the sources <a href="https://github.com/roger-padrell/setupthing/blob/main/software.json">here</a></p>
+          <input readonly="" id="code" value="curl -sSL ${baseURL}/api/${ctx.params.id} | bash">
+          <p>This should not harm your computer in any way, as it's using other package managers and code from other sources. You can check the code before using it <a href="${baseURL}/api/${ctx.params.id}">here</a>. We do not certify the security and / or originality of these packages. You can see the sources <a href="https://github.com/roger-padrell/setupthing/blob/main/software.json">here</a></p>
         </body>
         <script>
           let code = document.getElementById("code");
@@ -808,7 +811,7 @@ router.get("/static/:name", (ctx) => {
   }
   else{
     ctx.response.status = 400
-    ctx.response.body = `echo 400: Trying static script at "https://setupthing.deno.dev/static/${ctx.params.id}", it does not exist`
+    ctx.response.body = `echo 400: Trying static script at "${baseURL}/static/${ctx.params.id}", it does not exist`
     return;
   }
 })
@@ -930,7 +933,6 @@ const app = new Application();
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-const portN: number = 8080;
 console.log("%cSetupThing", "font-weight: black; color: green")
 console.log("   Use setups the %ceazy %cway", "font-weight: bold", "font-weight: normal")
 console.log("")
@@ -995,7 +997,7 @@ function solveOrder(solvingOrder: order){
       // generate single-item code
       let i = solvingOrder.items[item];
       let methods = software[i].methods;
-      // start block
+      // start block  
       result += `
 # Installing ${i}
 available=("${Object.keys(software[i].methods).join('" "')}")
@@ -1005,9 +1007,21 @@ for pm in "\${available[@]}"; do
     if [ "$installed" -eq 0 ]; then
         if printf '%s\n' "$\{detected[@]}" | grep -Fxq "$pm"; then`
       for(const m in methods){
+        // start command list
         result += `
-            if [[ "$pm" = "${m}" ]]; then
-                ${methodCommand[m].replace("%s%",methods[m])}
+            if [[ "$pm" = "${m}" ]]; then`
+        // Get installing command as an array and parse it
+        let installingCommand: String[] = (typeof methods[m] == "string") ? [methods[m]] : methods[m];
+        // parse if needed
+        for(let ic in Object.keys(installingCommand)){
+          if(parseInt(ic) == (installingCommand.length-1)){
+            // parse with %s%
+            installingCommand[ic] = methodCommand[m].replace("%s%",installingCommand[ic])
+          }
+          result += `
+                ${installingCommand[ic]}`
+        }
+        result += `
                 installed=1
             fi`
       }
